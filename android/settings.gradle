@@ -1,0 +1,3 @@
+rootProject.name = 'repo'
+
+include ':app'
