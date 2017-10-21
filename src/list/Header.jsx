@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { View, Text, StyleSheet, Image } from 'react-native';
 
-import HeaderButton from './HeaderButton';
-
 const Header = ({ style }) => (
   <View style={[styles.container, style]}>
     <Image
@@ -12,22 +10,30 @@ const Header = ({ style }) => (
         'https://avatars3.githubusercontent.com/u/1691440?s=400&u=04daa13d7839d4980f2583a5cf1d31aa39375b4d&v=4'
       }
     />
-    <Text style={styles.title}>Esa Firman</Text>
+    <Text style={styles.title}>ESA FIRMAN</Text>
+    <Text style={styles.bio}>Hacker wannabe</Text>
   </View>
 );
 
 const styles = StyleSheet.create({
   container: {
-    background: '#333',
-    height: 200,
+    background: '#111',
+    height: 180,
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'center'
   },
   title: {
     fontSize: 16,
-    fontColor: '#FFF',
-    paddingTop: 8,
+    paddingTop: 10,
+    fontWeight: '600',
     color: '#FFF'
+  },
+  bio: {
+    marginTop: 5,
+    fontSize: 12,
+    fontWeight: '100',
+    color: '#DDD'
   },
   image: {
     width: 80,

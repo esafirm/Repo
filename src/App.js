@@ -19,12 +19,14 @@ class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Router>
-          <Route
-            path="/page/:pageId"
-            render={({ match }) => this.renderScreen(match.params.pageId)}
-          />
-        </Router>
+        <View>
+          <Router>
+            <Route
+              path="/page/:pageId"
+              render={({ match }) => this.renderScreen(match.params.pageId)}
+            />
+          </Router>
+        </View>
       </View>
     );
   }
@@ -33,8 +35,14 @@ class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    marginLeft: 20,
+    marginRight: 20,
+    maxWidth: 480,
+    width: '100%',
     alignSelf: 'center',
-    width: Math.min(412, Dimensions.get('window').width)
+    shadowOpacity: '0.7',
+    shadowColor: '#333',
+    shadowRadius: 15
   }
 });
 

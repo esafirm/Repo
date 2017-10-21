@@ -1,10 +1,6 @@
-import React from 'react';
-import { AppRegistry } from 'react-native';
-import { Text } from 'react-native';
-
-import App from './App';
-
+import { AppRegistry, Text } from 'react-native';
 import registerServiceWorker from './registerServiceWorker';
+import App from './App';
 
 registerServiceWorker();
 
