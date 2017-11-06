@@ -16,10 +16,10 @@ const RepoList = ({ items }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    background: 'red'
+    backgroundColor: 'red'
   },
   repoItem: {
-    background: '#FFF',
+    backgroundColor: '#FFF',
     width: '100%',
     height: '80'
   }

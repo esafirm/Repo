@@ -1,5 +1,4 @@
 import React from 'react';
-import { AppRegistry } from 'react-native';
 import { View, StyleSheet, Dimensions } from 'react-native';
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -40,7 +39,7 @@ const styles = StyleSheet.create({
     maxWidth: 480,
     width: '100%',
     alignSelf: 'center',
-    shadowOpacity: '0.7',
+    shadowOpacity: 0.7,
     shadowColor: '#333',
     shadowRadius: 15
   }

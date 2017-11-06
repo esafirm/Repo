@@ -35,7 +35,7 @@ const SocialBar = () => (
 
 const styles = StyleSheet.create({
   container: {
-    background: '#EEE',
+    backgroundColor: '#EEE',
     width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
