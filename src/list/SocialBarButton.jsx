@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TouchableOpacity, Image, Text, StyleSheet } from 'react-native';
+import { TouchableOpacity, Image, StyleSheet } from 'react-native';
 
 const SocialBarButton = ({ style, text, image, link }) => (
   <TouchableOpacity
@@ -8,7 +8,6 @@ const SocialBarButton = ({ style, text, image, link }) => (
     onClick={() => window.open(link)}
   >
     <Image style={styles.image} source={image} />
-    <Text style={styles.text}>{text}</Text>
   </TouchableOpacity>
 );
 
@@ -28,9 +27,6 @@ const styles = StyleSheet.create({
   image: {
     width: 32,
     height: 32
-  },
-  text: {
-    marginTop: 8
   }
 });
 

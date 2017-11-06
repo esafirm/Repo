@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     boxShadow: '0px 4px 2px -2px rgba(0,0,0,0.2)'
   }
 });
