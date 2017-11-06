@@ -5,17 +5,9 @@ import Header from './Header';
 import RepoList from './RepoList';
 import SocialBar from './SocialBar';
 
-const items = [
-  {
-    title: 'Something Something'
-  },
-  {
-    title: 'Item #2'
-  },
-  {
-    title: 'Some item again #3'
-  }
-];
+import items from '../data/portofolio'
+
+console.log('Repo items:', items)
 
 class RepoListScreen extends React.Component {
   render() {
