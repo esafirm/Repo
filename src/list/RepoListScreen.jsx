@@ -5,9 +5,7 @@ import Header from './Header';
 import RepoList from './RepoList';
 import SocialBar from './SocialBar';
 
-import items from '../data/portofolio'
-
-console.log('Repo items:', items)
+import items from '../data/portofolio';
 
 class RepoListScreen extends React.Component {
   render() {

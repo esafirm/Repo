@@ -4,29 +4,20 @@ import { View, StyleSheet } from 'react-native';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import RepoDetailScreen from './detail/RepoDetailScreen';
-import ReportListScreen from './list/RepoListScreen';
+import RepoListScreen from './list/RepoListScreen';
 
 class App extends React.Component {
-  renderScreen(pageId = 'list') {
-    if (pageId === 'list') {
-      return <ReportListScreen />;
-    } else {
-      return <RepoDetailScreen />;
-    }
-  }
-
   render() {
     return (
-      <View style={styles.container}>
-        <View>
-          <Router>
-            <Route
-              path="/"
-              render={({ match }) => this.renderScreen(match.params.pageId)}
-            />
-          </Router>
+      <Router>
+        <View style={styles.container}>
+          <Route exact path="/" component={RepoListScreen} />
+          <Route
+            path="/project/:name"
+            render={({ match }) => <RepoDetailScreen {...match} />}
+          />
         </View>
-      </View>
+      </Router>
     );
   }
 }

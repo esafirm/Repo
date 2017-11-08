@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { StyleSheet, TouchableOpacity, Image, View, Text } from 'react-native';
 
 const RepoItem = ({ name, images, desc }) => (
-  <TouchableOpacity>
+  <TouchableOpacity accessibilityRole="link" href={`/project/${name}`}>
     <Image style={styles.itemContainer} source={images ? images[0] : null}>
       <View style={styles.itemScrim}>
         <Text style={styles.itemName}>{name}</Text>
