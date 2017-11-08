@@ -22,13 +22,19 @@ const socialBarItems = [
     image:
       'https://cdn3.iconfinder.com/data/icons/picons-social/57/11-linkedin-64.png',
     link: 'https://www.linkedin.com/in/esa-firman-01b8096b/'
+  },
+  {
+    text: 'Blog',
+    image:
+      'https://cdn3.iconfinder.com/data/icons/picons-social/57/20-rss-64.png',
+    link: 'https://nolambda.stream'
   }
 ];
 
 const SocialBar = () => (
   <View style={styles.container}>
     {socialBarItems.map((item, index) => (
-      <SocialBarButton {...item} id={index} />
+      <SocialBarButton {...item} key={index} />
     ))}
   </View>
 );

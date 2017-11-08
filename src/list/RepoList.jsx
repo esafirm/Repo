@@ -4,7 +4,7 @@ import { View, Image, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
 const RepoItem = ({ name, images, desc }) => (
   <TouchableOpacity>
-    <Image style={styles.itemContainer} source={images[0]}>
+    <Image style={styles.itemContainer} source={images ? images[0] : null}>
       <View style={styles.itemScrim}>
         <Text style={styles.itemName}>{name}</Text>
         <Text style={styles.itemDesc} numberOfLines={2} ellipsizeMode={'tail'}>
@@ -16,7 +16,7 @@ const RepoItem = ({ name, images, desc }) => (
 );
 
 const RepoList = ({ items }) => {
-  return items.map((data, index) => <RepoItem {...data} id={index} />);
+  return items.map((data, index) => <RepoItem {...data} key={index} />);
 };
 
 const styles = StyleSheet.create({
