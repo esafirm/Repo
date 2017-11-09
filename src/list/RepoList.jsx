@@ -1,10 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, Image, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import {
+  View,
+  Image,
+  Text,
+  TouchableOpacity,
+  ScrollView,
+  StyleSheet
+} from 'react-native';
 import RepoItem from './RepoItem';
 
 const RepoList = ({ items }) => {
-  return items.map((data, index) => <RepoItem {...data} key={index} />);
+  return (
+    <ScrollView>
+      {items.map((data, index) => <RepoItem {...data} key={index} />)}
+    </ScrollView>
+  );
 };
 
 const styles = StyleSheet.create({
