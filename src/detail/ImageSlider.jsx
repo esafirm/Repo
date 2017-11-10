@@ -1,18 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  Image,
-  StyleSheet,
-  ScrollView,
-  TouchableOpacity,
-  Dimensions
-} from 'react-native';
-
-const screenWidth = Dimensions.get('window').width;
+import { Image, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 
 const renderImageItems = images =>
   images.map((image, index) => (
-    <TouchableOpacity style={styles.item} key={index} onPress={() => window.open(image)}>
+    <TouchableOpacity
+      style={styles.item}
+      key={index}
+      onPress={() => window.open(image)}
+    >
       <Image style={styles.image} source={image} resizeMode={'cover'} />
     </TouchableOpacity>
   ));
@@ -26,6 +22,11 @@ const ImageSlider = ({ style, images }) => (
     {images ? renderImageItems(images) : null}
   </ScrollView>
 );
+
+ImageSlider.propTypes = {
+  styles: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
+  images: PropTypes.arrayOf(PropTypes.object).isRequired
+};
 
 const styles = StyleSheet.create({
   container: {

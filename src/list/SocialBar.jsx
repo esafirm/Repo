@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { View, StyleSheet } from 'react-native';
 
 import SocialBarButton from './SocialBarButton';
@@ -50,5 +49,4 @@ const styles = StyleSheet.create({
   }
 });
 
-SocialBar.propTypes = {};
 export default SocialBar;

@@ -1,5 +1,3 @@
-import images from './images/moinves0.png';
-
 const importAll = r => r.keys().map(r);
 const allImages = importAll(require.context('./images', false));
 const imagesFor = filter => allImages.filter(item => item.includes(filter));
@@ -53,8 +51,10 @@ const portofolio = [
     desc:
       'A simple & secure mobile investing app that lets you buy & sell mutual funds from anywhere at anytime!',
     year: '2016',
-    link:
-      'https://play.google.com/store/apps/details?id=com.mercatocapitale.mmi&hl=in',
+    link: {
+      playstore:
+        'https://play.google.com/store/apps/details?id=com.mercatocapitale.mmi&hl=in'
+    },
     images: imagesFor('moinves')
   },
   {
@@ -133,7 +133,12 @@ const portofolio = [
     name: 'Merci (Medical Emergency Responders Care Information)',
     desc:
       'Merci is a ground breaking mobile app which allows a users personal medical information to be accessed quickly and simply in an emergency situation. The information is also accessible even if you have a pin lock on your phone. Keeping both your personal information and yourself safe and secure',
-    year: '2014'
+    year: '2014',
+    link: {
+      playstore:
+        'https://play.google.com/store/apps/details?id=com.digitalnoir.merci'
+    },
+    images: imagesFor('merci')
   },
   {
     name: 'Mandiri e-cash',

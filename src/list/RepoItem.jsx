@@ -48,6 +48,13 @@ const RepoItem = ({ name, images, desc, year }) => (
   </TouchableOpacity>
 );
 
+RepoItem.propTypes = {
+  name: PropTypes.string.isRequired,
+  images: PropTypes.arrayOf(PropTypes.object).isRequired,
+  desc: PropTypes.string.isRequired,
+  year: PropTypes.string.isRequired
+};
+
 const styles = StyleSheet.create({
   itemContainer: {
     minHeight: 120,

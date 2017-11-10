@@ -25,10 +25,10 @@ const renderStore = link => (
       />
     ) : null}
 
-    {link.appStore ? (
+    {link.appstore ? (
       <BadgeButton
         icon={Icons.appleBadge}
-        onPress={() => window.open(link.appStore)}
+        onPress={() => window.open(link.appstore)}
       />
     ) : null}
   </View>

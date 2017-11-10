@@ -15,6 +15,10 @@ const Header = ({ style }) => (
   </View>
 );
 
+Header.propTypes = {
+  style: PropTypes.oneOfType([PropTypes.number, PropTypes.object])
+};
+
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#111',

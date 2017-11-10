@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text, Dimensions } from 'react-native';
+import { StyleSheet, View, Dimensions } from 'react-native';
 
 import RepoInfo from './RepoInfo';
 import RepoDetailHeader from './RepoDetailHeader';
