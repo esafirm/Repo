@@ -13,7 +13,7 @@ const LinearGradient = ({ style, children, colors }) => (
 );
 
 LinearGradient.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.node),
+  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
   colors: PropTypes.arrayOf(PropTypes.string).isRequired,
   style: PropTypes.shape({})
 };
