@@ -12,7 +12,7 @@ const screenWidth = Dimensions.get('window').width;
 
 const renderImageItems = images =>
   images.map((image, index) => (
-    <TouchableOpacity style={styles.item} key={index} onPress={() => {}}>
+    <TouchableOpacity style={styles.item} key={index} onPress={() => window.open(image)}>
       <Image style={styles.image} source={image} resizeMode={'cover'} />
     </TouchableOpacity>
   ));
