@@ -11,7 +11,7 @@ const Header = ({ style }) => (
       }
     />
     <Text style={styles.title}>ESA FIRMAN</Text>
-    <Text style={styles.bio}>Hacker wannabe</Text>
+    <Text style={styles.bio}>Learn. Rant. Code. Repeat</Text>
   </View>
 );
 

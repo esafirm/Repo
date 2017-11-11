@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TouchableOpacity, Image, StyleSheet } from 'react-native';
+import { TouchableOpacity, Image, StyleSheet, Dimensions } from 'react-native';
+
+const isSmallScreen = Dimensions.get('window').width <= 360
 
 const SocialBarButton = ({ style, text, image, link }) => (
   <TouchableOpacity
     style={[styles.container, style]}
-    onClick={() => window.open(link)}
+    onPress={() => window.open(link, '_blank')}
   >
     <Image style={styles.image} source={image} />
   </TouchableOpacity>
@@ -19,7 +21,7 @@ SocialBarButton.propTypes = {
 
 const styles = StyleSheet.create({
   container: {
-    width: 100,
+    width: isSmallScreen ? 80 : 100,
     height: 80,
     alignItems: 'center',
     justifyContent: 'center'
