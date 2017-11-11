@@ -25,7 +25,7 @@ const ImageSlider = ({ style, images }) => (
 
 ImageSlider.propTypes = {
   styles: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
-  images: PropTypes.arrayOf(PropTypes.object).isRequired
+  images: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
 const styles = StyleSheet.create({

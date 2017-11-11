@@ -10,14 +10,9 @@ const Toolbar = () => (
   >
     <TouchableOpacity
       style={styles.toolbarBackButton}
-      accessibilityRole="link"
-      href={'/'}
+      onPress={() => window.open('/', '_self')}
     >
-      <Image
-        style={styles.toolbarBackButtonImage}
-        source={Icons.arrowBack}
-        tintColor={'#FFF'}
-      />
+      <Image style={styles.toolbarBackButtonImage} source={Icons.arrowBack} />
     </TouchableOpacity>
   </LinearGradient>
 );
@@ -38,13 +33,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     margin: 20,
-    background: '#222',
+    backgroundColor: '#222',
     borderRadius: 24
   },
   toolbarBackButtonImage: {
     width: 24,
     height: 24,
-    radius: '12'
+    borderRadius: 12
   }
 });
 

@@ -15,7 +15,7 @@ const LinearGradient = ({ style, children, colors }) => (
 LinearGradient.propTypes = {
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
   colors: PropTypes.arrayOf(PropTypes.string).isRequired,
-  style: PropTypes.shape({})
+  style: PropTypes.oneOfType([PropTypes.number, PropTypes.object])
 };
 
 export default LinearGradient;

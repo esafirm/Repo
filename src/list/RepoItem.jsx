@@ -30,7 +30,7 @@ const Divider = () => (
 );
 
 const RepoItem = ({ name, images, desc, year }) => (
-  <TouchableOpacity accessibilityRole="link" href={`/project/${name}`}>
+  <TouchableOpacity onPress={() => window.open(`/project/${name}`, '_self')}>
     <View style={styles.itemContainer}>
       <View style={styles.titleContainer}>
         <Text style={styles.itemName}>{name}</Text>
