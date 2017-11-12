@@ -8,6 +8,7 @@ import {
   Text,
   ScrollView
 } from 'react-native';
+import { isWeb, webOnly } from '../utils/WebHelper';
 
 const ImageSlider = ({ images }) => (
   <ScrollView style={styles.imageSlider} horizontal={true}>
@@ -29,12 +30,21 @@ const Divider = () => (
   />
 );
 
+const renderYear = year =>
+  isWeb ? (
+    <Text style={styles.itemYear}>{year}</Text>
+  ) : (
+    <View style={styles.itemYear}>
+      <Text style={styles.itemYearText}>{year}</Text>
+    </View>
+  );
+
 const RepoItem = ({ name, images, desc, year }) => (
   <TouchableOpacity onPress={() => window.open(`/project/${name}`, '_self')}>
     <View style={styles.itemContainer}>
       <View style={styles.titleContainer}>
         <Text style={styles.itemName}>{name}</Text>
-        <Text style={styles.itemYear}>{year}</Text>
+        {renderYear(year)}
       </View>
 
       <Text numberOfLines={1} style={styles.itemDesc}>
@@ -62,7 +72,8 @@ const styles = StyleSheet.create({
   },
   titleContainer: {
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
+    justifyContent: 'flex-start'
   },
   itemName: {
     fontSize: 18,
@@ -74,9 +85,12 @@ const styles = StyleSheet.create({
     fontWeight: '200',
     marginTop: 10
   },
-  itemYear: {
+  itemYearText: {
     fontSize: 12,
-    color: '#EEE',
+    color: '#EEE'
+  },
+  itemYear: {
+    ...webOnly({ fontSize: 12, color: '#EEE' }),
     backgroundColor: '#222',
     borderRadius: 8,
     paddingTop: 4,

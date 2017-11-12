@@ -9,7 +9,7 @@ const SocialBarButton = ({ style, text, image, link }) => (
     style={[styles.container, style]}
     onPress={() => window.open(link, '_blank')}
   >
-    <Image style={styles.image} source={image} />
+    <Image style={styles.image} source={{uri: image}} />
   </TouchableOpacity>
 );
 

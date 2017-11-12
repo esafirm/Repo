@@ -6,9 +6,10 @@ const Header = ({ style }) => (
   <View style={[styles.container, style]}>
     <Image
       style={styles.image}
-      source={
-        'https://avatars3.githubusercontent.com/u/1691440?s=400&u=04daa13d7839d4980f2583a5cf1d31aa39375b4d&v=4'
-      }
+      source={{
+        uri:
+          'https://avatars3.githubusercontent.com/u/1691440?s=400&u=04daa13d7839d4980f2583a5cf1d31aa39375b4d&v=4'
+      }}
     />
     <Text style={styles.title}>ESA FIRMAN</Text>
     <Text style={styles.bio}>Learn. Rant. Code. Repeat</Text>

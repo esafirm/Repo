@@ -37,11 +37,11 @@ const portofolio = [
     name: 'Ogan Lopian (Purwakarta Smart City)',
     desc:
       'A smart city application for Purwakarta. It includes reporting platform, calling ambulance and doctor through the app, and a catalogue of point of interest.',
+    year: '2016',
     link: {
       playstore:
         'https://play.google.com/store/apps/details?id=com.satulingkaran.oganlopian'
     },
-    year: '2016',
     images: imagesFor('ogan')
   },
   {
