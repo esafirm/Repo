@@ -1,6 +1,4 @@
-const importAll = r => r.keys().map(r);
-const allImages = importAll(require.context('./images', false));
-const imagesFor = filter => allImages.filter(item => item.includes(filter));
+import { imagesFor } from './ImageLoader';
 
 const portofolio = [
   {

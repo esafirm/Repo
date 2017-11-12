@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
+import { webOnly } from '../utils/WebHelper';
 
 import SocialBarButton from './SocialBarButton';
 
@@ -45,7 +46,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    boxShadow: '0px 4px 2px -2px rgba(0,0,0,0.2)'
+    ...webOnly({ boxShadow: '0px 4px 2px -2px rgba(0,0,0,0.2)' })
   }
 });
 
