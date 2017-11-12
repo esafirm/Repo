@@ -34,7 +34,7 @@ const portofolio = [
     images: imagesFor('wongjawa')
   },
   {
-    name: 'Ogan Lopian / Purwakarta Smart City',
+    name: 'Ogan Lopian (Purwakarta Smart City)',
     desc:
       'A smart city application for Purwakarta. It includes reporting platform, calling ambulance and doctor through the app, and a catalogue of point of interest.',
     link: {
