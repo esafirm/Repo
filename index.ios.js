@@ -1,3 +1,3 @@
 import { AppRegistry } from 'react-native';
-import App from './src/list/RepoListScreen';
+import App from './src/App';
 AppRegistry.registerComponent('repo', () => App);
