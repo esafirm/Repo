@@ -248,11 +248,4 @@ const portofolio = [
   }
 ];
 
-console.log(
-  'Summary:',
-  `
-  Count: ${portofolio.length}
-`
-);
-
 export default portofolio;
