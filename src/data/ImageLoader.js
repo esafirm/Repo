@@ -1,12 +1,12 @@
 import { Platform } from 'react-native';
-import getAllImage from './images';
+import getAllImagesForApp from './images';
 
 const isWeb = Platform.OS === 'web';
-const allImages = isWeb ? getAllImages() : getAllImage();
+const allImages = isWeb ? getAllImagesForWeb() : getAllImagesForApp();
 const imagesFor = filter =>
   isWeb ? imagesForWeb(filter) : imagesForApp(filter);
 
-function getAllImages() {
+function getAllImagesForWeb() {
   const importAll = r => r.keys().map(r);
   return importAll(require.context('./images', false));
 }
