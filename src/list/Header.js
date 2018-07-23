@@ -12,7 +12,7 @@ const Header = ({ style }) => (
       }}
     />
     <Text style={styles.title}>ESA FIRMAN</Text>
-    <Text style={styles.bio}>Learn. Rant. Code. Repeat</Text>
+    <Text style={styles.bio}>Learn. Code. Rant. Repeat</Text>
   </View>
 );
 
