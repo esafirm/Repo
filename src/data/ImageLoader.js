@@ -12,7 +12,7 @@ function getAllImagesForWeb() {
 }
 
 function imagesForWeb(filter) {
-  return allImages.filter(item => typeof item == 'string' && item.includes(filter));
+  return allImages.filter(item => typeof item === 'string' && item.includes(filter));
 }
 
 function imagesForApp(filter) {
