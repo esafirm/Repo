@@ -9,6 +9,7 @@ import {
   ScrollView
 } from 'react-native';
 import { isWeb, webOnly } from '../utils/WebHelper';
+import { open } from '../utils/LinkingHelper'
 
 const ImageSlider = ({ images }) => (
   <ScrollView style={styles.imageSlider} horizontal={true}>
@@ -34,13 +35,13 @@ const renderYear = year =>
   isWeb ? (
     <Text style={styles.itemYear}>{year}</Text>
   ) : (
-    <View style={styles.itemYear}>
-      <Text style={styles.itemYearText}>{year}</Text>
-    </View>
-  );
+      <View style={styles.itemYear}>
+        <Text style={styles.itemYearText}>{year}</Text>
+      </View>
+    );
 
 const RepoItem = ({ name, images, desc, year }) => (
-  <TouchableOpacity onPress={() => window.open(`/project/${name}`, '_self')}>
+  <TouchableOpacity onPress={() => open(`/project/${name}`, '_self')}>
     <View style={styles.itemContainer}>
       <View style={styles.titleContainer}>
         <Text style={styles.itemName}>{name}</Text>
