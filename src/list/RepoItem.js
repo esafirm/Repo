@@ -2,14 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
   StyleSheet,
-  TouchableOpacity,
   Image,
   View,
   Text,
   ScrollView
 } from 'react-native';
+import { TouchableLink } from '../components/TouchableLink'
 import { isWeb, webOnly } from '../utils/WebHelper';
-import { open } from '../utils/LinkingHelper'
 
 const ImageSlider = ({ images }) => (
   <ScrollView style={styles.imageSlider} horizontal={true}>
@@ -41,7 +40,7 @@ const renderYear = year =>
     );
 
 const RepoItem = ({ name, images, desc, year }) => (
-  <TouchableOpacity onPress={() => open(`/project/${name}`, '_self')}>
+  <TouchableLink to={`/project/${name}`}>
     <View style={styles.itemContainer}>
       <View style={styles.titleContainer}>
         <Text style={styles.itemName}>{name}</Text>
@@ -56,7 +55,7 @@ const RepoItem = ({ name, images, desc, year }) => (
 
       <Divider />
     </View>
-  </TouchableOpacity>
+  </TouchableLink>
 );
 
 RepoItem.propTypes = {

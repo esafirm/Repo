@@ -1,6 +1,7 @@
 import React from 'react';
-import { StyleSheet, View, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Image } from 'react-native';
 import LinearGradient from '../components/LinearGradient';
+import { TouchableLink } from '../components/TouchableLink'
 import Icons from '../images';
 
 const Toolbar = () => (
@@ -8,12 +9,12 @@ const Toolbar = () => (
     style={styles.toolbar}
     colors={['rgba(0, 0, 0, 0.2)', 'transparent 100%']}
   >
-    <TouchableOpacity
+    <TouchableLink
       style={styles.toolbarBackButton}
-      onPress={() => window.open('/', '_self')}
+      to="/"
     >
       <Image style={styles.toolbarBackButtonImage} source={Icons.arrowBack} />
-    </TouchableOpacity>
+    </TouchableLink>
   </LinearGradient>
 );
 
